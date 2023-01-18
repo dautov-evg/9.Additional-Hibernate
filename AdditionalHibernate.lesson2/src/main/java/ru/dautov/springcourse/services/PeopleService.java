@@ -3,6 +3,7 @@ package ru.dautov.springcourse.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.dautov.springcourse.models.Mood;
 import ru.dautov.springcourse.models.Person;
 import ru.dautov.springcourse.repositories.PeopleRepository;
 
@@ -32,6 +33,7 @@ public class PeopleService {
     @Transactional
     public void save(Person person) {
         person.setCreatedAt(new Date());
+        person.setMood(Mood.CALM); //При сохранении человека значение поля Mood = CALM (в таблице будет 4)
         peopleRepository.save(person);
     }
 
