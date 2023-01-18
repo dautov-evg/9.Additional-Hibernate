@@ -32,8 +32,8 @@ public class PeopleService {
 
     @Transactional
     public void save(Person person) {
-        person.setCreatedAt(new Date());
-        person.setMood(Mood.CALM); //При сохранении человека значение поля Mood = CALM (в таблице будет 4)
+//        person.setCreatedAt(new Date());
+//        person.setMood(Mood.CALM); //При сохранении человека значение поля Mood = CALM (в таблице будет 4)
         peopleRepository.save(person);
     }
 

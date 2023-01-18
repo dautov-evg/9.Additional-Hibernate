@@ -7,3 +7,4 @@ ALTER TABLE Person ADD COLUMN created_at TIMESTAMP;
 ALTER TABLE Person ADD COLUMN mood int; --Потому что выбрали Ordinal
 ALTER TABLE Person DROP COLUMN mood;
 ALTER TABLE Person ADD COLUMN mood VARCHAR; --Потому что String
+
